@@ -1,7 +1,9 @@
-export function Home(){
+import { Container } from './styles'
+
+
+export function Login(){
     return(
-      <>
-        <h1>Hi</h1>
-      </>  
+      <Container>
+      </Container> 
     )
   }
