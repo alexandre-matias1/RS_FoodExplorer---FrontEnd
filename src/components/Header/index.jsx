@@ -1,22 +1,32 @@
 import { Container } from './styles'
-import  Receipt  from '../../assets/Receipt.svg'
 import { Input } from '../../components/Input'
-import { Button } from '../../components/Button'
-import {  RiBillLine } from 'react-icons/ri'
+import { HeaderButton } from '../Header-Button'
 import { SignOut } from '@phosphor-icons/react'
-
+import { useState } from 'react'
+import Menu from '../../assets/Menu.svg'
 
 export function Header(){
 
-    let isAdmin = true
+    let isAdmin = false
     return(
-        <Container>
+        <Container className='container'>
+            <div className="menu-container">
+                <button className='button-menu'>
+                <img src={Menu} alt="" />
+                </button>
+            </div>
             <div className='logo-container'>
-                <svg width="26" height="31" viewBox="0 0 26 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className='logo' width="26" height="31" viewBox="0 0 26 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M13 0.866394L25.9904 8.36639V23.3664L13 30.8664L0.00961876 23.3664V8.36639L13 0.866394Z" fill="#065E7C"/>
                 </svg>
                 <div className='name-container'>
-                    <span className='logo-name'>food explorer</span>
+                    <span className='logo-name'>food explorer {
+                        isAdmin ?
+                        <span className="admin">admin</span>
+                            :
+                        <span></span>
+                    }</span>
+
                 </div>
             </div>
         <div className="input-container">
@@ -28,22 +38,19 @@ export function Header(){
         {
             isAdmin ?
             <div className="button-container">
-            <Button
-            icon={RiBillLine}
-            name="Meus pedidos (0)"
+            <HeaderButton
+            name="Novo Prato"
             />
             </div>
             :
             <div className="button-container">
-            <Button
-            name="Novo Prato"
+            <HeaderButton
+            name="Pedidos(0)"
             />
             </div>
         }
-        
-        <SignOut size={32} color='white' />
 
-        
+        <SignOut className='exit' size={32} color='white' />
         </Container>
     )
 }
