@@ -70,6 +70,10 @@ export const Container = styled.div`
       gap: 16px;
     }
 
+  .button{
+    width: 100%;
+  }
+
   
 
 
@@ -118,6 +122,10 @@ export const Container = styled.div`
       margin-top: 12px;
       flex-direction: column;
       gap: 16px;
+    }
+
+    .button{
+      height: 32px;
     }
   }
   

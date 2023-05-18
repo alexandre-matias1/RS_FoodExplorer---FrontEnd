@@ -5,7 +5,7 @@ import { Button } from "../Button";
 import { Count } from "../Count";
 
 export function Dishes({ children, ...rest }) {
-  let isAdmin = true;
+  let isAdmin = false;
 
   return (
     <Container>
@@ -31,7 +31,9 @@ export function Dishes({ children, ...rest }) {
           ) : (
             <div className="components-container">
               <Count />
-              <Button name="inserir" loading />
+              <div className="button">
+                <Button name="inserir" loading />
+              </div>
             </div>
           )}
         </div>

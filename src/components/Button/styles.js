@@ -22,7 +22,7 @@ export const Container = styled.button`
     }
 
     @media (max-width: 435px){
-        height: 32px;
+        height: 100%;
     }
 
 `
