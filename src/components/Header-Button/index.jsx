@@ -1,24 +1,20 @@
-import  Receipt  from '../../assets/Receipt.svg'
-import { Container } from './styles'
+import { Container } from "./styles";
+import cart from "../../assets/cart.svg";
 
-export function HeaderButton({name, icon:Icon, ...rest}){
+export function HeaderButton({ name, qtd, ...rest }) {
+  let isAdmin = true;
 
-    let isAdmin = false;
-
-    return(
-    <Container 
-    type='button'
-    {...rest}
-    >
-        {
-            isAdmin?
-            <img src=""alt="" />
-            :
-            <img src={Receipt} alt="" />
-            
-        }
-        <span className='name'>{name}</span>
-
+  return (
+    <Container type="button" {...rest}>
+      {isAdmin ? (
+        <div className="empty"/>
+      ) : (
+        <div className="stats">
+          <img src={cart} alt="" />
+          <span className="qtd-cart">{qtd}</span>
+        </div>
+      )}
+      <span className="name">{name}</span>
     </Container>
-    )
+  );
 }

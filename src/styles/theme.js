@@ -32,6 +32,5 @@ export default{
 
         CAKE_100: "#065E7C",
         CAKE_200: "#82F3FF",
-    }
-
+    },
 }

@@ -21,7 +21,7 @@ export const Container = styled.button`
         background-color: ${({ theme }) => theme.COLORS.TOMATO_400};
     }
 
-    @media (max-width: 435px){
+    @media (max-width: 1023px){
         height: 100%;
     }
 

@@ -2,14 +2,13 @@ import { Container } from './styles'
 import { Input } from '../../components/Input'
 import { HeaderButton } from '../Header-Button'
 import { SignOut } from '@phosphor-icons/react'
-import { useState } from 'react'
 import Menu from '../../assets/Menu.svg'
 
 export function Header(){
 
-    let isAdmin = false
+    let isAdmin = true
     return(
-        <Container className='container'>
+        <Container>
             <div className="menu-container">
                 <button className='button-menu'>
                 <img src={Menu} alt="" />
@@ -46,11 +45,13 @@ export function Header(){
             <div className="button-container">
             <HeaderButton
             name="Pedidos(0)"
+            qtd="0"
             />
             </div>
         }
-
         <SignOut className='exit' size={32} color='white' />
+
+        
         </Container>
     )
 }

@@ -4,6 +4,7 @@ export const Container = styled.footer`
     background-color: ${({ theme }) => theme.COLORS.DARK_600};
     width: 100%;
     height: 77px;
+    margin-top: 48px;
 
     .container-logo{
         display: flex;
